@@ -1,20 +1,23 @@
-package i_introduction._1_Java_To_Kotlin_Converter
+package i_introduction._1_Java_To_Kotlin_Converter;
 
-import util.JavaCode
+import util.JavaCode;
 
-class JavaCode1 : JavaCode() {
-    fun task1(collection: Collection<Int>): String {
-        val sb = StringBuilder()
-        sb.append("{")
-        val iterator = collection.iterator()
+import java.util.Collection;
+import java.util.Iterator;
+
+public class JavaCode1 extends JavaCode {
+    public String task1(Collection<Integer> collection) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        Iterator<Integer> iterator = collection.iterator();
         while (iterator.hasNext()) {
-            val element = iterator.next()
-            sb.append(element)
+            Integer element = iterator.next();
+            sb.append(element);
             if (iterator.hasNext()) {
-                sb.append(", ")
+                sb.append(", ");
             }
         }
-        sb.append("}")
-        return sb.toString()
+        sb.append("}");
+        return sb.toString();
     }
 }
