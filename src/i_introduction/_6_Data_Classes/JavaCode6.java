@@ -1,24 +1,8 @@
-package i_introduction._6_Data_Classes;
+package i_introduction._6_Data_Classes
 
-import util.JavaCode;
+import util.JavaCode
 
-public class JavaCode6 extends JavaCode {
+class JavaCode6 : JavaCode() {
 
-    public static class Person {
-        private final String name;
-        private final int age;
-
-        public Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-    }
+    class Person(val name: String, val age: Int)
 }
